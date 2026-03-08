@@ -1,6 +1,6 @@
 ---
 version: "1"
-website_url: http://astro.build/
+website_url: https://astro.build/
 media_path: /public
 ssg_framework: astro
 frontmatter_format: yaml
