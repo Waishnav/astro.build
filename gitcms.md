@@ -1,7 +1,7 @@
 ---
 version: "1"
 website_url: https://astro.build/
-media_path: /public
+media_path: /src/content/blog/_images/
 ssg_framework: astro
 frontmatter_format: yaml
 sitemap_url: http://astro.build/sitemap-index.xml
