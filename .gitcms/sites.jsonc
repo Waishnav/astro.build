@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "sites": [
+    {
+      "key": "astro",
+      "display_name": "Site",
+      "website_url": "https://astro.build",
+      "root_path": ""
+    }
+  ]
+}

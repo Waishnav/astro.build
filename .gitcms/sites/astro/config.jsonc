@@ -1,0 +1,282 @@
+{
+  "version": "1.2",
+  "media": {
+    "default_library": "repo_media",
+    "libraries": [
+      {
+        "key": "repo_media",
+        "label": "Repository media",
+        "references": {
+          "write": {
+            "mode": "root_relative",
+            "base_path": "/"
+          },
+          "match": [
+            {
+              "mode": "prefix",
+              "value": "/"
+            }
+          ],
+          "allow_default_library_fallback": true
+        },
+        "limits": {
+          "max_file_size_mb": 10
+        },
+        "driver": "git",
+        "storage": {
+          "root_path": "public"
+        }
+      }
+    ]
+  },
+  "ssg_framework": "astro",
+  "frontmatter_format": "yaml",
+  "sitemap_url": "https://astro.build/sitemap-index.xml",
+  "publishing_mode": "editorial_workflow",
+  "collections": [
+    {
+      "name": "blog",
+      "git_path": "/src/content/blog/",
+      "file_extension": ".mdx",
+      "filename_pattern": "",
+      "collection_type": "flat",
+      "frontmatter_schema": [
+        {
+          "name": "title",
+          "type": "title",
+          "label": "Title"
+        },
+        {
+          "name": "description",
+          "type": "richtext",
+          "label": "Description"
+        },
+        {
+          "name": "publishDate",
+          "type": "datetime",
+          "label": "Publish Date"
+        },
+        {
+          "name": "authors",
+          "type": "multiselect",
+          "label": "Authors",
+          "options": [
+            "fred"
+          ],
+          "color": "blue"
+        },
+        {
+          "name": "lang",
+          "type": "text",
+          "label": "Lang"
+        },
+        {
+          "name": "socialImage",
+          "type": "image",
+          "label": "Social Image"
+        }
+      ]
+    },
+    {
+      "name": "caseStudies",
+      "git_path": "/src/content/caseStudies/",
+      "file_extension": ".mdx",
+      "filename_pattern": "",
+      "collection_type": "flat",
+      "frontmatter_schema": [
+        {
+          "name": "title",
+          "type": "title",
+          "label": "Title"
+        },
+        {
+          "name": "description",
+          "type": "richtext",
+          "label": "Description"
+        },
+        {
+          "name": "seo",
+          "type": "json",
+          "label": "Seo"
+        },
+        {
+          "name": "coverGradientFrom",
+          "type": "text",
+          "label": "Cover Gradient From"
+        },
+        {
+          "name": "coverGradientTo",
+          "type": "text",
+          "label": "Cover Gradient To"
+        },
+        {
+          "name": "publishDate",
+          "type": "datetime",
+          "label": "Publish Date"
+        },
+        {
+          "name": "authors",
+          "type": "multiselect",
+          "label": "Authors",
+          "options": [
+            "astro-team"
+          ],
+          "color": "blue"
+        },
+        {
+          "name": "lang",
+          "type": "text",
+          "label": "Lang"
+        },
+        {
+          "name": "socialImage",
+          "type": "image",
+          "label": "Social Image"
+        },
+        {
+          "name": "coverImage",
+          "type": "image",
+          "label": "Cover Image"
+        },
+        {
+          "name": "headerImage",
+          "type": "image",
+          "label": "Header Image"
+        }
+      ]
+    },
+    {
+      "name": "pages",
+      "git_path": "/src/content/pages/",
+      "file_extension": ".md",
+      "filename_pattern": "",
+      "collection_type": "grouped",
+      "frontmatter_schema": [
+        {
+          "name": "seo",
+          "type": "json",
+          "label": "Seo"
+        },
+        {
+          "name": "pageLayout",
+          "type": "text",
+          "label": "Page Layout"
+        },
+        {
+          "name": "image",
+          "type": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "name": "agencies",
+      "git_path": "/src/content/agencies/",
+      "file_extension": ".md",
+      "filename_pattern": "",
+      "collection_type": "flat",
+      "frontmatter_schema": [
+        {
+          "name": "name",
+          "type": "title",
+          "label": "Name"
+        },
+        {
+          "name": "location",
+          "type": "text",
+          "label": "Location"
+        },
+        {
+          "name": "url",
+          "type": "url",
+          "label": "Url"
+        },
+        {
+          "name": "image",
+          "type": "image",
+          "label": "Image"
+        },
+        {
+          "name": "imageAlt",
+          "type": "text",
+          "label": "Image Alt"
+        },
+        {
+          "name": "contactLink",
+          "type": "url",
+          "label": "Contact Link"
+        },
+        {
+          "name": "description",
+          "type": "richtext",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "name": "quotes",
+      "git_path": "/src/content/quotes/",
+      "file_extension": ".md",
+      "filename_pattern": "",
+      "collection_type": "flat",
+      "frontmatter_schema": [
+        {
+          "name": "author",
+          "type": "json",
+          "label": "Author"
+        },
+        {
+          "name": "url",
+          "type": "url",
+          "label": "Url"
+        },
+        {
+          "name": "published",
+          "type": "datetime",
+          "label": "Published"
+        }
+      ]
+    },
+    {
+      "name": "careers",
+      "git_path": "/src/content/careers/",
+      "file_extension": ".md",
+      "filename_pattern": "",
+      "collection_type": "flat",
+      "frontmatter_schema": [
+        {
+          "name": "title",
+          "type": "title",
+          "label": "Title"
+        },
+        {
+          "name": "published",
+          "type": "datetime",
+          "label": "Published"
+        },
+        {
+          "name": "location",
+          "type": "text",
+          "label": "Location"
+        },
+        {
+          "name": "team",
+          "type": "text",
+          "label": "Team"
+        },
+        {
+          "name": "type",
+          "type": "text",
+          "label": "Type"
+        }
+      ]
+    },
+    {
+      "name": "partials",
+      "git_path": "/src/content/partials/",
+      "file_extension": ".md",
+      "filename_pattern": "",
+      "collection_type": "flat"
+    }
+  ]
+}
